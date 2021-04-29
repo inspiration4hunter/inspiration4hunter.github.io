@@ -18,7 +18,6 @@ setTimeout(() => {
     voices.forEach(function(voice, i) {
           console.log(voice.name);
     });
-    speakExt("hello", 1.0);
 }, 60);
 
 window.addEventListener('load', function() {
@@ -104,7 +103,11 @@ window.addEventListener('load', function() {
 	}
 
 	$('#page-main #button-bookmarks').addEventListener('click', function () {
-		var bookmarks = (localStorage.getItem('bookmarks') || '').split(',').filter(b => !!b);
+		//var bookmarks = (localStorage.getItem('bookmarks') || '').split(',').filter(b => !!b);
+                var bookmarks = [];
+                for (var i = 0; i<words.length; i++) {
+                    bookmarks.push(words[i].word);
+                }
 		var $bookmarks = $('#page-bookmarks #bookmarks');
 		$bookmarks.innerHTML = '';
 		var dict = getOption('dictionary');

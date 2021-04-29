@@ -41,7 +41,7 @@ html, body { padding: 0; margin: 0; height: 100%;}
 #page-main #button-bookmarks[animation] {animation-duration: 1s; animation-name: animation-bookmarks; animation-iteration-count: 1;}
 @keyframes animation-bookmarks {from {background: gold;} to {background: white;}}
 
-#page-main #button-start {padding: 10px 20px; margin-top: 10px; text-align: center; cursor: pointer; border-radius: 5px; background: #0f0;}
+#page-main #button-start {padding: 10px 20px; margin-top: 400px; text-align: center; cursor: pointer; border-radius: 5px; background: #ddd;}
 
 #page-main #word {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; min-height: 100px;}
 #page-main #word::before {content: 'Score: ' attr(score); display: block; text-align: center; margin-bottom: 15px;}
