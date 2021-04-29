@@ -78,7 +78,7 @@ window.addEventListener('load', function() {
                 setPage('main');
                 setTimeout(() => {
                     setWord();
-                }, 160);
+                }, 500);
             });
         }
 	$('#page-main #button-help').addEventListener('click', () => setPage('help'));
