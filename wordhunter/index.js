@@ -14,9 +14,11 @@ var voices = [];
 
 setTimeout(() => {
     voices = speechSynthesis.getVoices();
+    console.log(voices.length);
     voices.forEach(function(voice, i) {
           console.log(voice.name);
     });
+    speakExt("hello", 1.0);
 }, 60);
 
 window.addEventListener('load', function() {
@@ -266,7 +268,7 @@ window.addEventListener('load', function() {
 		//	_words = filter(words);
 		
 		if (!_words.length)	
-			return alert('Well done! No more words!')
+			return alert('Well done! No more words!!')
 
 		var word = _words[Math.floor(Math.random() * _words.length)];
 		current_word_no = word.index;
