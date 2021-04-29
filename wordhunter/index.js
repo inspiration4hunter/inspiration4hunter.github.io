@@ -259,6 +259,7 @@ window.addEventListener('load', function() {
 			return arr
 				.filter((w) => showed_words.indexOf(w.word) == -1)
                 }
+		console.log("set word: " + words.length);
                 _words = filter1(words)
 		//var _words = Math.random() < 0.3 ? filter(errors) : [];
 		//if (!_words.length)
@@ -333,6 +334,7 @@ function loadWords(deck) {
 		.then(response => response.json())
 		.then(function (json) {
 			words = json;
+			console.log("load words: " + words.length);
 			words.forEach((w, i) => w.index = i);
 			var _errors = localStorage.getItem('errors');
 			if (!_errors)
