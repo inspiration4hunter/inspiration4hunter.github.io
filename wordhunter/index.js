@@ -53,19 +53,23 @@ window.addEventListener('load', function() {
 
 	//$('#page-start #button-start').addEventListener('click', () => setPage('main') || setWord());
         var $word_decks= $('#page-start #word-decks');
+
+        var n = 251; //XXX if diff from cols X rows, input will not work.
         var cols = 10;
-        for (var i=0; i<25; i++) {
+        for (var i=0; i<n/10+1; i++) {
             var $de = document.createElement('tr');
             var $tds = "";
             for (var j=0; j<cols; j++) {
                 deck_num = i*cols+j;
+                if (deck_num >= n) {
+                    break;
+                }
                 $tds += '<td id="d'+deck_num+'"><div id="button-deck" data-deck="'+deck_num+'">D. '+deck_num+'</div></td>';
             }
             $de.innerHTML = $tds;
             $word_decks.appendChild($de);
         }
 
-        var n = 250; //XXX if diff from cols X rows, input will not work.
         var arr = [];
         for (var i=0; i<n; i++) {
             var $ele = $('#d' + i + ' #button-deck');
